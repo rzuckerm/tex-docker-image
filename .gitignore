@@ -1,0 +1,7 @@
+/hello_world
+/.meta*
+*.aux
+*.log
+*.pdf
+*.html
+/init.sh

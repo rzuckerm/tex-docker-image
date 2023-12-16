@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+
+from pathlib import Path
+import sys
+
+from bs4 import BeautifulSoup
+
+def main():
+    html_filename = sys.argv[1]
+    html = Path(html_filename).read_text(encoding="utf-8")
+    soup = BeautifulSoup(html, "html.parser")
+    for div in soup.find_all("div"):
+        prev_paragraph = None
+        for paragraph in div.find_all("p"):
+            if prev_paragraph is not None:
+                print(prev_paragraph.text)
+
+            prev_paragraph = paragraph
+
+if __name__ == "__main__":
+    main()
