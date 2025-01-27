@@ -1,5 +1,5 @@
 TEX_VERSION := $(shell cat TEX_VERSION)
-TEX_DEPS := $(wildcard TEX_*) html2txt requirements.txt
+TEX_DEPS := $(wildcard TEX_*)
 DOCKER_TAG_PREFIX := rzuckerm/tex:$(TEX_VERSION)
 DOCKER_TAG_SUFFIX ?= -dev
 

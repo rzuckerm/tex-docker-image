@@ -4,4 +4,5 @@
 *.log
 *.pdf
 *.html
+*.txt
 /init.sh
